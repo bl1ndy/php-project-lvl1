@@ -1,0 +1,16 @@
+{
+    "name": "hexlet/code",
+    "bin": [
+        "bin/brain-games"
+    ],
+    "description": "First PHP project",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "blindy",
+            "email": "ayoblindstone@gmail.com"
+        }
+    ],
+    "require": {}
+}
