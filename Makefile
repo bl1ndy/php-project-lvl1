@@ -6,3 +6,6 @@ brain-games:
 
 validate:
 	composer validate
+
+lint:
+	composer run-script phpcs

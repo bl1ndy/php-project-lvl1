@@ -6,6 +6,9 @@
     "description": "First PHP project",
     "type": "project",
     "license": "MIT",
+    "scripts": {
+        "phpcs": "phpcs -- --standard=PSR12 src bin"
+    },
     "authors": [
         {
             "name": "blindy",
