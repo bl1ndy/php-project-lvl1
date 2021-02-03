@@ -2,8 +2,8 @@
 
 <?php
 
-use function Brain\Games\Cli\greetings;
+use function Brain\Games\Cli\getUserName;
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-greetings();
+getUserName();
