@@ -22,15 +22,15 @@ function startGame()
 
         $question = "$num1 $operation $num2";
         switch ($operation) {
-        case '+':
-            $correctAnswer = $num1 + $num2;
-            break;
-        case '-':
-            $correctAnswer = $num1 - $num2;
-            break;
-        case '*':
-            $correctAnswer = $num1 * $num2;
-            break;
+            case '+':
+                $correctAnswer = $num1 + $num2;
+                break;
+            case '-':
+                $correctAnswer = $num1 - $num2;
+                break;
+            case '*':
+                $correctAnswer = $num1 * $num2;
+                break;
         }
 
         $userAnswer = (int) prompt("Question: $question");
