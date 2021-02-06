@@ -4,7 +4,8 @@
         "bin/brain-games",
         "bin/brain-even",
         "bin/brain-calc",
-        "bin/brain-gcd"
+        "bin/brain-gcd",
+        "bin/brain-progression"
     ],
     "description": "First PHP project",
     "type": "project",
@@ -24,6 +25,7 @@
             "src/Games/Even.php",
             "src/Games/Calc.php",
             "src/Games/Gcd.php",
+            "src/Games/Progression.php",
             "src/Engine.php"
         ]
     },
