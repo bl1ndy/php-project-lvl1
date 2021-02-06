@@ -2,19 +2,13 @@
 
 namespace Brain\Games\Calc;
 
-use function cli\line;
-use function cli\prompt;
-use function Brain\Games\Cli\getUserName;
+use function Brain\Games\Engine\startGame;
 
 const DESCRIPTION = 'What is the result of the expression?';
 
-function startGame()
+function startRound()
 {
-    $name = getUserName();
-
-    line(DESCRIPTION);
-
-    for ($i = 0; $i < 3; $i += 1) {
+    $getQuestionAndAnswer = function () {
         $num1 = random_int(1, 9);
         $num2 = random_int(1, 9);
         $operations = ['+', '-', '*'];
@@ -33,19 +27,8 @@ function startGame()
                 break;
         }
 
-        $userAnswer = (int) prompt("Question: $question");
-        line("Your answer: $userAnswer");
+        return [$question, $correctAnswer];
+    };
 
-        if ($userAnswer === $correctAnswer) {
-            line("Correct!");
-        } else {
-            line("'$userAnswer' is wrong answer ;(. "
-            . "Correct answer was '$correctAnswer'.");
-            line("Let's try again, $name!");
-            break;
-        }
-    }
-    if ($i === 3) {
-        line("Congratulations, $name!");
-    }
+    startGame(DESCRIPTION, $getQuestionAndAnswer);
 }

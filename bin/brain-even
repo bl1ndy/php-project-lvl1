@@ -2,8 +2,8 @@
 
 <?php
 
-use function Brain\Games\Even\startGame;
+use function Brain\Games\Even\startRound;
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-startGame();
+startRound();
