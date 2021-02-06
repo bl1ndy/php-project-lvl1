@@ -6,9 +6,9 @@ use function Brain\Games\Engine\startGame;
 
 const DESCRIPTION = 'What number is missing in the progression?';
 
-function startRound()
+function startRound(): void
 {
-    function progression()
+    function progression(): array
     {
         $begin = random_int(0, 100);
         $count = random_int(5, 10);
@@ -26,7 +26,7 @@ function startRound()
         return [implode(' ', $result), $lostNum];
     }
 
-    $getQuestionAndAnswer = function () {
+    $getQuestionAndAnswer = function (): array {
         [$question, $correctAnswer] = progression();
 
         return [$question, $correctAnswer];

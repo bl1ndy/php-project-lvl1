@@ -6,9 +6,9 @@ use function Brain\Games\Engine\startGame;
 
 const DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-function startRound()
+function startRound(): void
 {
-    $getQuestionAndAnswer = function () {
+    $getQuestionAndAnswer = function (): array {
         $question = random_int(1, 999);
         $correctAnswer = $question % 2 === 0 ? 'yes' : 'no';
 
