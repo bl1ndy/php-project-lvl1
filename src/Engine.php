@@ -6,13 +6,14 @@ use function cli\line;
 use function cli\prompt;
 use function Brain\Games\Cli\getUserName;
 
-function startGame($description, $getQuestionAndAnswer)
+function startGame(string $description, callable $getQuestionAndAnswer): void
 {
     $name = getUserName();
 
     line($description);
+    $rounds = 0;
 
-    for ($i = 0; $i < 3; $i += 1) {
+    for (; $rounds < 3; $rounds += 1) {
         [$question, $correctAnswer] = $getQuestionAndAnswer();
 
         $userAnswer = prompt("Question: $question");
@@ -27,7 +28,7 @@ function startGame($description, $getQuestionAndAnswer)
             break;
         }
     }
-    if ($i === 3) {
+    if ($rounds === 3) {
         line("Congratulations, $name!");
     }
 }
